@@ -2,15 +2,15 @@ cd "$(dirname "$0")"
 
 # --- EDIT -------------------------------------------------------------------------------------------------------------
 
-VENDOR_NAME="example_vendor"
-VENDOR_URL="github.com/example_vendor_github"
-VENDOR_EMAIL="example_vendor@gmail.com"
-PLUGIN_NAME="example_plugin"
-PREFIX_FOR_FILENAMES="ex_"
-PLUGIN_IDENTIFIER="com.example_vendor.example_plugin"
-PLUGIN_CLASSNAME="Cexample_plugin"
+VENDOR_NAME="rpuhalovich"
+VENDOR_URL="github.com/rpuhalovich"
+VENDOR_EMAIL="reanpuhalovich@gmail.com"
+PLUGIN_NAME="VReverb"
+PREFIX_FOR_FILENAMES="rp_"
+PLUGIN_IDENTIFIER="com.rpuhalovich.vreverb"
+PLUGIN_CLASSNAME="Cvreverb"
 PLUGIN_CATEGORY="Reverb"
-PLUGIN_BUNDLENAME="example_pluginb_bundle"
+PLUGIN_BUNDLENAME="vreverbbundle"
 
 # --- DO NOT EDIT ------------------------------------------------------------------------------------------------------
 
