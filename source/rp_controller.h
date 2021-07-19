@@ -2,9 +2,17 @@
 
 #pragma once
 
+#include "vstgui/plugin-bindings/vst3editor.h"
 #include "public.sdk/source/vst/vsteditcontroller.h"
 
 namespace rpuhalovich {
+
+enum class ParamIDs { reverbParam };
+
+class ReverbParameter : public Steinberg::Vst::Parameter {
+public:
+    ReverbParameter(Steinberg::int32 flags, Steinberg::int32 id);
+};
 
 //  VReverbController
 class VReverbController : public Steinberg::Vst::EditControllerEx1 {

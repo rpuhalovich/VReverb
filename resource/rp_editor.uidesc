@@ -4,6 +4,8 @@
 		"bitmaps": {},
 		"fonts": {},
 		"colors": {},
+		"gradients": {},
+		"control-tags": {},
 		"custom": {
 			"FocusDrawing": {},
 			"VST3Editor": {
@@ -18,18 +20,27 @@
 			"UIEditController": {
 				"EditViewScale": "1",
 				"EditorSize": "0, 0, 1036, 638",
-				"SplitViewSize_0_0": "0.6592742321537989891311326573486439883709",
-				"SplitViewSize_0_1": "0.3080460292841094571691940018354216590524",
-				"SplitViewSize_1_0": "0.4828431372549019662265834540448850020766",
-				"SplitViewSize_1_1": "0.5089869281045751314707104029366746544838",
-				"SplitViewSize_2_0": "0.8262548262548262689719535956101026386023",
-				"SplitViewSize_2_1": "0.1689189189189189144180147650331491604447",
+				"SplitViewSize_0_0": "0.6584967320261437828676776007341686636209",
+				"SplitViewSize_0_1": "0.3088235294117647189438002897077240049839",
+				"SplitViewSize_1_0": "0.4836601307189542509057389452209463343024",
+				"SplitViewSize_1_1": "0.5098039215686274161498658941127359867096",
+				"SplitViewSize_2_0": "0.6644202272864382363692925537179689854383",
+				"SplitViewSize_2_1": "0.3307535178873069470206758069252828136086",
 				"TabSwitchValue": "0",
 				"Version": "1"
 			},
 			"UIAttributesController": {},
 			"UIViewCreatorDataSource": {
 				"SelectedRow": "7"
+			},
+			"UITagsDataSource": {
+				"SelectedRow": "-1"
+			},
+			"UIGradientsDataSource": {
+				"SelectedRow": "-1"
+			},
+			"UIFontsDataSource": {
+				"SelectedRow": "-1"
 			}
 		},
 		"templates": {
@@ -44,6 +55,43 @@
 					"size": "540, 290",
 					"transparent": "false",
 					"wants-focus": "false"
+				},
+				"children": {
+					"CKnob": {
+						"attributes": {
+							"angle-range": "270",
+							"angle-start": "135",
+							"circle-drawing": "false",
+							"class": "CKnob",
+							"control-tag": "None",
+							"corona-color": "~ RedCColor",
+							"corona-dash-dot": "true",
+							"corona-dash-dot-lengths": "1.26,0.1",
+							"corona-drawing": "true",
+							"corona-from-center": "false",
+							"corona-inset": "12",
+							"corona-inverted": "false",
+							"corona-line-cap-butt": "true",
+							"corona-outline": "true",
+							"corona-outline-width-add": "2",
+							"default-value": "0.5",
+							"handle-color": "~ WhiteCColor",
+							"handle-line-width": "8",
+							"handle-shadow-color": "~ BlackCColor",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"origin": "90, 90",
+							"size": "70, 70",
+							"skip-handle-drawing": "true",
+							"transparent": "false",
+							"value-inset": "3",
+							"wants-focus": "true",
+							"wheel-inc-value": "0.1",
+							"zoom-factor": "1.5"
+						}
+					}
 				}
 			}
 		}

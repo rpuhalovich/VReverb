@@ -77,6 +77,7 @@ source_group("Precompile Header File" FILES "${CMAKE_SOURCE_DIR}/build/CMakeFile
 set_target_properties(fxobjects validator VST3Inspector PROPERTIES FOLDER "Libraries")
 
 if(SMTG_MAC)
+    add_compile_definitions(GL_SILENCE_DEPRECATION)
     smtg_set_bundle(${PROJECT_NAME} INFOPLIST "${CMAKE_CURRENT_LIST_DIR}/resource/Info.plist" PREPROCESS)
 elseif(SMTG_WIN)
     target_sources(${PROJECT_NAME} PRIVATE resource/win32resource.rc)

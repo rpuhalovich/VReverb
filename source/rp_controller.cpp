@@ -4,6 +4,8 @@
 #include "rp_cids.h"
 #include "vstgui/plugin-bindings/vst3editor.h"
 
+#include "pluginterfaces/base/ustring.h"
+
 using namespace Steinberg;
 
 namespace rpuhalovich {
@@ -19,6 +21,10 @@ tresult PLUGIN_API VReverbController::initialize (FUnknown* context) {
     }
 
     // Here you could register some parameters
+
+    auto* reverbParam = new ReverbParameter(Steinberg::Vst::ParameterInfo::kCanAutomate, (int) ParamIDs::reverbParam);
+    reverbParam->setUnitID((int) ParamIDs::reverbParam);
+    parameters.addParameter(reverbParam);
 
     return result;
 }
@@ -80,3 +86,18 @@ tresult PLUGIN_API VReverbController::getParamValueByString (Vst::ParamID tag, V
 }
 
 } // namespace rpuhalovich
+
+using namespace rpuhalovich;
+
+ReverbParameter::ReverbParameter(Steinberg::int32 flags, Steinberg::int32 id) {
+    Steinberg::UString (info.title, USTRINGSIZE (info.title)).assign (USTRING ("Gain"));
+    Steinberg::UString (info.units, USTRINGSIZE (info.units)).assign (USTRING ("dB"));
+
+    info.flags = flags;
+    info.id = id;
+    info.stepCount = 0;
+    info.defaultNormalizedValue = 0.5f;
+    info.unitId = Steinberg::Vst::kRootUnitId;
+
+    setNormalized (1.f);
+}
