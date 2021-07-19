@@ -19,13 +19,23 @@ set(vst3sdk_SOURCE_DIR ${EXTERN_DIR}/VST3_SDK)
 file(GLOB_RECURSE src FILE ${SRC_DIR}/*.cpp ${SRC_DIR}/*.hpp ${SRC_DIR}/*.h)
 
 set(src_resources "${RESOURCE_DIR}/${file_prefix}editor.uidesc" "${RESOURCE_DIR}/win32resource.rc")
-source_group(resource FILES "${vst3sdk_SOURCE_DIR}/public.sdk/source/main/dllmain.cpp")
+
+source_group(resource FILES
+    "${vst3sdk_SOURCE_DIR}/public.sdk/source/main/dllmain.cpp"
+    "${vst3sdk_SOURCE_DIR}/public.sdk/source/main/macmain.cpp"
+)
+
 source_group(TREE ${CMAKE_SOURCE_DIR} FILES ${src} ${src_resources})
+
+set(tgt_inc
+    ${SRC_DIR}/dsp
+    ${SRC_DIR}/utils
+)
 
 # --- lib -------------------------------------------------
 # fxobjects
 add_library(fxobjects ${EXTERN_DIR}/fxobjects/fxobjects.cpp)
-set(tgt_inc ${EXTERN_DIR}/fxobjects)
+set(tgt_inc ${tgt_inc} ${EXTERN_DIR}/fxobjects)
 set(lib ${lib} fxobjects)
 
 # --- VST -------------------------------------------------
